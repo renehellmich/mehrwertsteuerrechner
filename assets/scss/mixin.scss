@@ -1,0 +1,13 @@
+@mixin generalSettings {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin displaySettings($display, $direction, $justify, $items, $self) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $items;
+    align-self: $self;
+}

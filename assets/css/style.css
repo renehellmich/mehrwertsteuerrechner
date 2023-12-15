@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: "";
+}
+body h1 {
+  width: 480px;
+  text-align: center;
+}
+body form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: "";
+  gap: 0.25rem;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  margin-trim: block;
+  padding: 0.5rem 0;
+}
+body form .sc__settings {
+  background-color: rgb(233, 233, 233);
+  padding: 0.5rem;
+  width: 480px;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem;
+}
+body form .sc__settings h2 {
+  font-size: 1rem;
+}
+body form .button__submit {
+  color: white;
+  background-color: rgb(44, 5, 245);
+  border: none;
+}
+body form hr {
+  width: 100%;
+  height: 1px;
+  border: 1px solid black;
+  margin: 0.5rem 0;
+}
+body form .h2__result {
+  padding-left: 0.5rem;
+  color: rgb(44, 5, 245);
+}
+body form .sc__Vat, body form .sc__brutto {
+  padding-bottom: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

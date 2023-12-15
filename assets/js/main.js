@@ -42,11 +42,11 @@ const importValue = () => {
 
     // sicherstellen, dass auf 2 Nachkommestellen gerundet wird!
     let value = document.querySelector("#input").value;
-    
+
     let VAT = 0;
     let amount = 0;
 
-    switch(ImportType) {
+    switch (ImportType) {
         case "netto":
             VAT = (Number(value) * perc) / 100;
             amount = Number(value) + Number(VAT.toFixed(2));
@@ -55,7 +55,7 @@ const importValue = () => {
             outputValue.innerHTML = amount;
             break;
         case "brutto":
-            amount = Number(value) / (( 100 + perc) / 100);
+            amount = Number(value) / ((100 + perc) / 100);
             VAT = (amount * perc) / 100;
             // value + VAT.toFixed(2);
 
