@@ -14,18 +14,18 @@
         <section class="sc__description sc__settings">
             <h2>Was soll berechnet werden?</h2>
             <div class="div__calc">
-                <input type="radio" name="netto_brutto" id="brutto" value="calcUp">
-                <label for="calcUp">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+                <input type="radio" name="netto_brutto" id="netto" value="calcUp" checked>
+                <label for="calcUp" id="labelCalcUp">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
             </div>
             <div class="div__calc">
-                <input type="radio" name="netto_brutto" id="netto" value="calcDown">
-                <label for="calcUp">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+                <input type="radio" name="netto_brutto" id="brutto" value="calcDown">
+                <label for="calcUp" id="labelCalcDown">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
             </div>
         </section>
         <section class="sc__percentage sc__settings">
             <h2>Mehrwertsteuersatz</h2>
             <div class="div__perc">
-                <input type="radio" name="percentage" id="perc19" value="perc19">
+                <input type="radio" name="percentage" id="perc19" value="perc19" checked>
                 <label for="calcUp">19%</label>
             </div>
             <div class="div__perc">
@@ -34,7 +34,7 @@
             </div>
         </section>
         <section class="sc__input sc__settings">
-            <p>Nettobetrag (Preis ohne Mehrwertsteuer) in Euro <span>*</span></p>
+            <p id="importText">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro <span id="starRed">*</span></p>
             <input type="number" name="input" id="input">
         </section>
         <button type="submit" id="buttonSubmit" class="button__submit">Berechnen</button>
@@ -42,11 +42,11 @@
         <h2 class="h2__result" id="h2Result">Ergebnis</h2>
         <section class="sc__VAT sc__settings">
             <h2>Mehrwertsteuer</h2>
-            <p>€ <span id="outputVAT"></span></p>
+            <p><span id="outputVAT"></span> €</p>
         </section>
         <section class="sc__bruttoOutput sc__settings">
-            <h2>Bruttobetrag (Endpreis)</h2>
-            <p>€ <span id="outputbrutto"></span></p>
+            <h2 id="outputDescription">Bruttobetrag (Endpreis)</h2>
+            <p><span id="outputValue"></span> €</p>
         </section>
 
     </form>
