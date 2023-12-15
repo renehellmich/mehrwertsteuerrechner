@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehrwertsteuerrechner</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    
+    <h1>Mehrwertsteuer-Rechner</h1>
+    <form action="#" onsubmit="calcVAT(); return false">
+        <section class="sc__description sc__settings">
+            <h2>Was soll berechnet werden?</h2>
+            <div class="div__calc">
+                <input type="radio" name="netto_brutto" id="brutto" value="calcUp">
+                <label for="calcUp">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+            </div>
+            <div class="div__calc">
+                <input type="radio" name="netto_brutto" id="netto" value="calcDown">
+                <label for="calcUp">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+            </div>
+        </section>
+        <section class="sc__percentage sc__settings">
+            <h2>Mehrwertsteuersatz</h2>
+            <div class="div__perc">
+                <input type="radio" name="percentage" id="perc19" value="perc19">
+                <label for="calcUp">19%</label>
+            </div>
+            <div class="div__perc">
+                <input type="radio" name="percentage" id="perc7" value="perc7">
+                <label for="calcUp">7%</label>
+            </div>
+        </section>
+        <section class="sc__input sc__settings">
+            <p>Nettobetrag (Preis ohne Mehrwertsteuer) in Euro <span>*</span></p>
+            <input type="number" name="input" id="input">
+        </section>
+        <button type="submit" id="buttonSubmit" class="button__submit">Berechnen</button>
+        <hr class="hr" id="hrLine">
+        <h2 class="h2__result" id="h2Result">Ergebnis</h2>
+        <section class="sc__VAT sc__settings">
+            <h2>Mehrwertsteuer</h2>
+            <p>€ <span id="outputVAT"></span></p>
+        </section>
+        <section class="sc__bruttoOutput sc__settings">
+            <h2>Bruttobetrag (Endpreis)</h2>
+            <p>€ <span id="outputbrutto"></span></p>
+        </section>
+
+    </form>
 
 
     <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
